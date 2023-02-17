@@ -27,4 +27,5 @@ class PersonaController extends Controller
     public function segunda(){
         return "nouuu";
     }
+    
 }

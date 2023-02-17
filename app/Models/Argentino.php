@@ -24,4 +24,10 @@ class Argentino extends Persona //herencia
         $this->sexo =$this->sexo .  " (hombre)";
     }
 
+    public function getSexo(){
+        return $this->sexo;
+    }
+
+    
+
 }

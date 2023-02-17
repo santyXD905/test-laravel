@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 //usar controller
 
 use App\Http\Controllers\PersonaController;
+use App\Http\Controllers\ArgentinoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,14 @@ Route::get('/persona/si', [PersonaController::class,"primera"]);
 //require_once llamar clases
 
 Route::get('/persona/no', [PersonaController::class,"segunda"]);
+
+//grupo de rutas
+
+Route::controller(ArgentinoController::class)->group(function(){
+    Route::get('/argentino/funo', [ArgentinoController::class,"funo"]);
+    Route::get('/argentino/fudos', [ArgentinoController::class,"funo2"]);
+    Route::get('/argentino/futres', [ArgentinoController::class,"funo3"]);
+
+});
+
+//grupo de rutas
